@@ -747,12 +747,14 @@
             }
         });
 
-        langCodeEl.textContent = lang.toUpperCase();
+langCodeEl.textContent = lang.toUpperCase();
         document.querySelectorAll('.lang-option').forEach(function (opt) {
             opt.classList.toggle('active', opt.dataset.lang === lang);
         });
 
-        startTypewriter(lang);
+        if (preloaderDone) {
+            startTypewriter(lang);
+        }
     }
 
     langDropdown.querySelectorAll('.lang-option').forEach(function (opt) {
