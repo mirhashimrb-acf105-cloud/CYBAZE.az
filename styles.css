@@ -445,12 +445,22 @@ nav a.active {
     }
 }
 
-.hero h1 {
+.hero h1,
+#typewriter-text {
     font-size: clamp(2.2rem, 5vw, 3.6rem);
     line-height: 1.12;
     margin-bottom: 22px;
     font-weight: 700;
+    font-family: 'JetBrains Mono', monospace;
     background: linear-gradient(90deg, #fff 0%, #94a3b8 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+[data-theme="light"] .hero h1,
+[data-theme="light"] #typewriter-text {
+    background: linear-gradient(90deg, #1e293b 0%, #475569 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
